@@ -66,3 +66,18 @@ Zmieniamy nazwę aplikacji:
 heroku rename herring  # nazwa cod jest już zajęta
 ```
 
+Potrzebne są też zmiany w *Gemfile*:
+
+```ruby
+group :heroku do
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+end
+```
+
+Problemy są też ze *static assets*. Trzeba zmienić domyślną ustawienia na:
+
+```ruby
+config.serve_static_assets = true
+config.assets.compile = true
+```

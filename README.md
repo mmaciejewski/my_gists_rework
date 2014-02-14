@@ -69,6 +69,11 @@ heroku rename herring  # nazwa cod jest już zajęta
 Potrzebne są też zmiany w *Gemfile*:
 
 ```ruby
+group :production do
+  gem 'pg', '0.14.1'
+end
+
+# zob. też http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?version=4.0
 group :heroku do
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'

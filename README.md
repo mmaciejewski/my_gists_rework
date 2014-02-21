@@ -86,3 +86,55 @@ Problemy są też ze *static assets*. Trzeba zmienić domyślną ustawienia na:
 config.serve_static_assets = true
 config.assets.compile = true
 ```
+
+## Wdrażanie aplikacji na Shelly Cloud
+
+Dla studentów Uniwersytetu Gdańskiego, biorących udział w przedmiocie
+Architektura Serwisów Internetowych, Shelly Cloud udostępnia darmowe
+konta na potrzeby zaliczenia przedmiotu. O szczegóły należy pytać
+prowadzącego lub kontaktować się mailowo z Maciejem Małeckim
+(smefju@shellycloud.com) **przed** założeniem konta.
+
+ * Zakładamy konto na [Shelly Cloud](https://shellycloud.com/sign_up).
+ * Instalujemy gem `shelly`
+
+```bash
+ $ gem install shelly
+```
+
+ * Logujemy się na wcześniej utworzone konto
+
+```bash
+ $ shelly login
+```
+
+ * Tworzymy nową chmurę
+
+```bash
+ $ shelly add
+```
+
+ * Dodajemy gem dla bazy PostgreSQL oraz zależności dla Shelly Cloud
+
+```ruby
+# Gemfile
+
+gem 'pg'
+gem 'shelly-dependencies'
+```
+
+i uruchamiamy `bundle install`
+
+ * Wdrażamy aplikację na Shelly Cloud
+
+```
+ $ git add Gemfile Gemfile.lock Cloudfile
+ $ git commit -m "Added Cloudfile for Shelly Cloud."
+ $ git push shelly master
+```
+
+ * Otwieramy naszą aplikację w przeglądarce
+
+```
+ $ shelly open # lub po prostu https://nazwa-applikacji.shellyapp.com/
+```

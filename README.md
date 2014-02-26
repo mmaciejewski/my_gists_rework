@@ -51,8 +51,8 @@ Tworzymy nową aplikację na Heroku:
 ```bash
 # cd do katalogu z aplikacją MyGists
 heroku create
-  Creating afternoon-tor-6637... done, stack is cedar
-  http://afternoon-tor-6637.herokuapp.com/ | git@heroku.com:afternoon-tor-6637.git
+  Creating desolate-ocean-2038... done, stack is cedar
+  http://desolate-ocean-2038.herokuapp.com/ | git@heroku.com:desolate-ocean-2038.git
   Git remote heroku added
 ```
 

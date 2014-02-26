@@ -5,7 +5,7 @@
  SQLite, [Heroku Toolbeit](https://toolbelt.heroku.com/)
 * Configuration:
 ```
-bundle install [--path=$HOME/.gems]
+bundle install --without production [--local | --path=$HOME/.gems]
 ```
 
 * Database creation:

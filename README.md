@@ -1,27 +1,22 @@
 ## My Gists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version + gemset: **2.1.1@my_gists**
+* System dependencies: *RVM*, *SQLite*
+* Configuration:
+```
+bundle install [--path=$HOME/.gems]
+```
 
-Things you may want to cover:
+* Database creation:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
+```
+rake db:migrate
+```
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rspec
+```
 
 
 ## Wdrażanie aplikacji na Heroku

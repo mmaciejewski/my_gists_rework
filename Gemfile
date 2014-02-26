@@ -4,6 +4,7 @@ gem 'rails', '4.0.3'
 
 group :development do
   gem 'sqlite3', '1.3.8'
+  gem 'quiet_assets'
 end
 
 gem 'uglifier', '>= 1.3.0'

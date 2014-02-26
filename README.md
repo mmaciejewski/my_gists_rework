@@ -74,8 +74,8 @@ Jeśli wszystkie polecenia wykonały się bez błędów,
 to aplikacja działa pod url wypisanym przez polecenie *create* powyżej:
 
 ```bash
-heroku open                               # lub
-http://afternoon-tor-6637.herokuapp.com/
+heroku open                               # lub wchodzimy na stronę
+http://desolate-ocean-2038.herokuapp.com/
 ```
 
 Zmieniamy nazwę aplikacji:

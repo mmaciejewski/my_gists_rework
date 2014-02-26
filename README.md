@@ -16,6 +16,7 @@ rake db:migrate
 
 * How to run the test suite
 ```
+rake db:migrate RAILS_ENV=test
 rspec
 ```
 

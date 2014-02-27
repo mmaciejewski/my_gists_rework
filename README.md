@@ -42,7 +42,7 @@ git commit -a -m "uaktualniono Gemfile.lock (Heroku)"
 
 Wdrażanie zaczynamy od założenia sobie konta na [Heroku](http://www.heroku.com/).
 
-Po założeniu konta logujemy się na Heroku:
+Po założeniu konta logujemy się na Heroku i przesyłamy na Heroku swój klucz publiczny:
 
 ```bash
 heroku login

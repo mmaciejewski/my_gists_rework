@@ -46,6 +46,7 @@ Po założeniu konta logujemy się na Heroku:
 
 ```bash
 heroku login
+heroku keys:add
 ```
 
 Tworzymy nową aplikację na Heroku:
@@ -81,7 +82,7 @@ http://desolate-ocean-2038.herokuapp.com/
 Zmieniamy nazwę aplikacji:
 
 ```bash
-heroku rename herring  # nazwa cod jest już zajęta
+heroku rename paczek
 ```
 
 

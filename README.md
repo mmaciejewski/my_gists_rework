@@ -1,6 +1,12 @@
 ## My Gists
 
 * Ruby version + gemset: **2.1.1@my_gists**
+* Rails version. Rusztowanie aplikacji generujemy w takis sposób:
+  ```
+  rails new my_app
+  rails _4.0.3_ new my_app  # jeśli w systemie zainstalowano kilka wersji Rails
+  ```
+
 * System dependencies: [RVM](http://rvm.io/rvm/install),
  SQLite, [Heroku Toolbeit](https://toolbelt.heroku.com/)
 * Configuration:

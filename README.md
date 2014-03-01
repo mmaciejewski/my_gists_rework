@@ -1,7 +1,7 @@
 ## My Gists
 
 * Ruby version + gemset: **2.1.1@my_gists**
-* Rails version. Rusztowanie aplikacji generujemy w takis sposób:
+* Rails version: **4.1.0.rc1**. Rusztowanie aplikacji generujemy w takis sposób:
   ```
   rails new my_app
   rails _4.0.3_ new my_app  # jeśli w systemie zainstalowano kilka wersji Rails

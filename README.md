@@ -43,7 +43,7 @@ group :production do
 end
 ```
 
-oraz dodajemy gem *sqlite* do grup *development* i *test*:
+oraz dodajemy gem *sqlite3* do grup *development* i *test*:
 
 ```ruby
 gem 'sqlite3', group: [:development, :test]

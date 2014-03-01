@@ -34,7 +34,7 @@ a Ruby on Rails minor mode for Emacs
 
 ## Wdrażanie aplikacji na Heroku
 
-Dopisujemy do pliku *Gemfile*:
+Dopisujemy do pliku *Gemfile* gemy *pg* i *rails_12factor*:
 
 ```ruby
 group :production do
@@ -43,8 +43,13 @@ group :production do
 end
 ```
 
-i uaktualniamy *Gemfile.lock*:
+oraz dodajemy gem *sqlite* do grup *development* i *test*:
 
+```ruby
+gem 'sqlite3', group: [:development, :test]
+```
+
+Po tych poprawkach uaktualniamy *Gemfile.lock*:
 
 ```bash
 bundle install --without production

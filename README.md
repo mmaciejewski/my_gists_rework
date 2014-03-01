@@ -20,6 +20,17 @@ rake db:migrate RAILS_ENV=test
 rspec
 ```
 
+## Edytory
+
+1\. Emacs, v24.3.1:
+
+* [Rinari](http://rinari.rubyforge.org/Navigation.html) –
+a Ruby on Rails minor mode for Emacs
+
+2\. Vim?
+
+3\. Sublime Text?
+
 
 ## Wdrażanie aplikacji na Heroku
 

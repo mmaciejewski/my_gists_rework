@@ -159,3 +159,16 @@ i uruchamiamy `bundle install`
 ```
  $ shelly open # lub po prostu https://nazwa-applikacji.shellyapp.com/
 ```
+
+## Pry
+
+Warto zainstalować następujace gemy:
+
+* pry
+* pry-doc
+* pry-theme
+* pry-syntax-hacks
+* pry-git
+* awesome_print
+* rubyvis
+

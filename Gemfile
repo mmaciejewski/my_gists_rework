@@ -12,8 +12,13 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '3.1.0'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'pygments.rb', '0.5.4'
 gem 'redcarpet', '3.1.1'
+
+gem 'bootstrap-sass', '~> 3.1.1'
+gem 'sass-rails', '~> 4.0.0'
+gem 'pygments.rb'
+gem 'will_paginate', '~> 3.0.5'
+
 
 group :development, :test do
   gem 'rspec-rails'

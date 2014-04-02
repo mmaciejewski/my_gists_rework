@@ -1,31 +1,38 @@
-<h1>Listing gists</h1>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-<table>
-  <thead>
-    <tr>
-      <th>Snippet</th>
-      <th>Lang</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="header bg-primary">
+<a href="/gists" class="btn btn-primary btn-lg active" role="button"> Main Page</a>
+<a href="https://github.com/mmaciejewski/my_gists_rework" class="btn btn-primary btn-lg active" role="button"> Github</a>
 
-  <tbody>
-    <% @gists.each do |gist| %>
-      <tr>
-        <td><%= gist.snippet[0,10] %>[…]</td>
-        <td><%= gist.lang %></td>
-        <td><%= gist.description %></td>
-        <td><%= link_to 'Show', gist %></td>
-        <td><%= link_to 'Edit', edit_gist_path(gist) %></td>
-        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+	<form class="navbar-form navbar-right" role="form">
+		Description
+                <%= form_tag gists_path, :method => 'get' do %>
+                 <%= (text_field_tag :search, params[:search], class:'form-control') %>
+                <%= submit_tag "Search", class:'btn btn-warning' , :name => nil, :onclick => "$( document ).ready;"%>
+               
+               
+                <% end %>
+
+	</form>
+
+
+</div>
+
+
+<div style="padding-top:150px; text-align: center; font-size: 60px;"> My gists</div>
+<%= link_to 'New Gist', new_gist_path, class:'btn btn-success btn-lg' %>
+
+<div class="main center-block">
+
+<div class="gists">	
+<table class="table">
+<%= render :partial => 'gist', :collection => @gists %>
 </table>
+</div>
 
-<br>
 
-<%= link_to 'New Gist', new_gist_path %>
+
+
+</div>

@@ -1,15 +1,28 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="header bg-primary">
+<a href="/gists" class="btn btn-primary btn-lg active" role="button"> Main Page</a>
+<a href="https://github.com/mmaciejewski/my_gists_rework" class="btn btn-primary btn-lg active" role="button"> Github</a>
+</div>
+
+<div class="main">
+
 <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Snippet:</strong>
+  <%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
+</p>
 
 <p>
   <strong>Lang:</strong>
   <%= @gist.lang %>
 </p>
 
-<p>
-  <strong>Snippet:</strong>
-</p>
 
-<%= raw Pygments.highlight(@gist.snippet, lexer: @gist.lang) %>
 
 <p>
   <strong>Description:</strong>
@@ -18,3 +31,5 @@
 
 <%= link_to 'Edit', edit_gist_path(@gist) %> |
 <%= link_to 'Back', gists_path %>
+
+</div>

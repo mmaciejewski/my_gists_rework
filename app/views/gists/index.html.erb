@@ -3,14 +3,14 @@
 </head>
 
 <div class="header bg-primary">
-<a href="/gists" class="btn btn-primary btn-lg active" role="button"> Main Page</a>
-<a href="https://github.com/mmaciejewski/my_gists_rework" class="btn btn-primary btn-lg active" role="button"> Github</a>
+<a href="/gists" class="btn btn-warning btn-lg active" role="button"> Main Page</a>
+<a href="https://github.com/mmaciejewski/my_gists_rework" class="btn btn-warning btn-lg active" role="button"> Github</a>
 
 	<form class="navbar-form navbar-right" role="form">
 		Description
                 <%= form_tag gists_path, :method => 'get' do %>
                  <%= (text_field_tag :search, params[:search], class:'form-control') %>
-                <%= submit_tag "Search", class:'btn btn-warning' , :name => nil, :onclick => "$( document ).ready;"%>
+                <%= submit_tag "Ask", class:'btn btn-warning' , :name => nil, :onclick => "$( document ).ready;"%>
                
                
                 <% end %>

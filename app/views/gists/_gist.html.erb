@@ -1,0 +1,10 @@
+<tbody>
+      <tr>
+        <td class="doHide"> <%= gist.snippet[0,20] %>[...]</td>
+        <td><%= gist.lang %></td>
+        <td><%= gist.description %></td>
+        <td> <%=link_to 'Show', gist,class:'btn btn-success btn-block' %> </td>
+<td><%= link_to 'Edit', edit_gist_path(gist),class:'btn btn-warning btn-block' %></td>
+        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-warning btn-danger btn-block' %></td>
+      </tr>
+</tbody>

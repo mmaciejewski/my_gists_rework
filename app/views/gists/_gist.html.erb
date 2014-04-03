@@ -1,10 +1,21 @@
-<tbody>
-      <tr>
-        <td class="doHide"> <%= gist.snippet[0,20] %>[...]</td>
-        <td><%= gist.lang %></td>
-        <td><%= gist.description %></td>
-        <td> <%=link_to 'Show', gist,class:'btn btn-success btn-block' %> </td>
-<td><%= link_to 'Edit', edit_gist_path(gist),class:'btn btn-warning btn-block' %></td>
-        <td><%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' },class:'btn btn-warning btn-danger btn-block' %></td>
-      </tr>
-</tbody>
+<div style="width:100%; margin-bottom: 65px;">
+
+      <div>
+<b>Language:</b> <%= gist.lang %>
+      </div>
+
+      <div>
+<b>Description:</b> <%= gist.description[0,20] + "..." %>
+      </div>
+
+      <div class="snippet ">
+<%= raw Pygments.highlight(gist.snippet.length > 20 ? gist.snippet[0,20] + "[...]" : gist.snippet, lexer: gist.lang) %>
+      </div>
+
+      <div class=>
+              <%= link_to 'Destroy', gist, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger",style:"float: right" %>
+              <%= link_to 'Edit', edit_gist_path(gist), class: "btn btn-warning",style:" float: right; margin-right: 15px" %>
+<%= link_to 'Show', gist, class: "btn btn-primary",style:"float : right; margin-right: 15px" %>
+      </div>
+
+</div>

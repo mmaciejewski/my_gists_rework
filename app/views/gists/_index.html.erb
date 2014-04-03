@@ -1,0 +1,17 @@
+
+<div  style="z-index:10;">
+<a href="gists" class="btn btn-warning btn-lg warning" role="button"> Main Page</a>
+
+
+<form class="navbar-form navbar-right" role="form">
+Description
+                <%= form_tag gists_path, :method => 'get' do %>
+                 <%= (text_field_tag :search, params[:search], class:'form-control') %>
+                <%= submit_tag "Search", class:'btn btn-warning' , :name => nil, :onclick => "$( document ).ready;"%>
+               
+               
+                <% end %>
+                
+</form>
+
+</div>

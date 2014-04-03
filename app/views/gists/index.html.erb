@@ -2,37 +2,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<div class="header bg-primary">
-<a href="/" class="btn btn-warning btn-lg active" role="button"> Main Page</a>
-<a href="https://github.com/mmaciejewski/my_gists_rework" class="btn btn-warning btn-lg active" role="button"> Github</a>
-
-	<form class="navbar-form navbar-right" role="form">
-		Description
-                <%= form_tag gists_path, :method => 'get' do %>
-                 <%= (text_field_tag :search, params[:search], class:'form-control') %>
-                <%= submit_tag "Ask", class:'btn btn-warning' , :name => nil, :onclick => "$( document ).ready;"%>
-               
-               
-                <% end %>
-
-	</form>
+<%= render 'index' %>
 
 
-</div>
+
+<div style="padding-top:100px; text-align: center; font-size: 60px;color: white"> Gists List</div>
 
 
-<div style="padding-top:150px; text-align: center; font-size: 60px;"> My gists</div>
-<%= link_to 'New Gist', new_gist_path, class:'btn btn-success btn-lg' %>
+<div style="padding-top:40px; float: center"> <%= link_to 'New Gist', new_gist_path, class:'btn btn-success btn-lg' %> </div>
 
-<div class="main center-block">
 
-<div class="gists">	
-<table class="table">
-<%= render :partial => 'gist', :collection => @gists %>
+<div class="main center-block" >
+
+<table id="gists" style="width:100%;" >
+  <%= render @gists %>
 </table>
+
+<div id="infinite-scrolling">
+  <%= will_paginate %>
 </div>
-
-
-
 
 </div>

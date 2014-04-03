@@ -1,0 +1,7 @@
+$('#gists').append('<%= j render @gists %>');
+<% if @gists.next_page %>
+$('.pagination').replaceWith('<%= j will_paginate @gists %>');
+<% else %>
+$(window).off('scroll');
+$('.pagination').remove();
+<% end %>

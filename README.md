@@ -11,6 +11,7 @@ Aplikacja zaliczeniowa na laboratoria z Architektury Serwisow Internetowych, pro
 * Responsywnosc
 * Zaimplementowane kolorowanie składni
 * funkcjonalność CRUD
+* Dodano Seed by mozna bylo w ten sposob dodawac rekordy
 
 # Użyte gemy:
 
